@@ -9,11 +9,6 @@
 
 ![Network Topology](https://i.imgur.com/q7hxYZl.png)
 
-**Core Layer:** Dual MikroTik CCR2116 (L3) 
-**Access Layer:** Triple MikroTik CRS Series (L2)  
-**Failover Stack:** DHCP Split-Scope + MSTP + VRRP  
-**Segmentation:** 9-VLAN Enterprise Environment using VLSM (10.10.0.0/22)
-
 ---
 
 ## The Lore
