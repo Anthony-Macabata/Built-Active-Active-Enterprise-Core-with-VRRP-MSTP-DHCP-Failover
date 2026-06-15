@@ -126,11 +126,13 @@ Active-Active is engineering. It forces you to understand how traffic actually f
 
 ---
 
-## The Proposal
+## Project Proposal Scenario
 
+<img width="1643" height="941" alt="image" src="https://github.com/user-attachments/assets/6429f679-e8ec-4345-9601-37850e9af3fb" />
 
-https://github.com/user-attachments/assets/0c4b3380-e009-4229-a450-f65601047c71
+<img width="901" height="673" alt="image" src="https://github.com/user-attachments/assets/321e2f9e-016b-42be-b33b-d52a8bc3c855" />
 
+<img width="991" height="686" alt="image" src="https://github.com/user-attachments/assets/9943e027-5059-4cd0-a29b-ed2ddf44b927" />
 
 
 **Core Layer:** Dual MikroTik CCR2116 (L3) 
