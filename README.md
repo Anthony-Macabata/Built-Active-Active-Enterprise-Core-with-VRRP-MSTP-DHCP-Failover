@@ -65,7 +65,10 @@ https://github.com/user-attachments/assets/0a27f1f6-234f-4fe4-9e7e-617283c09e23
 **What I did:** Simulated a total hardware crash on Core 1. 
 **What happened:** VRRP state transition to Backup Core completed in under 4 seconds. Only 4 packets dropped during the transition.
 
-https://github.com/user-attachments/assets/f7e63541-030f-4a1c-a0d5-f72e1b52ba65
+
+https://github.com/user-attachments/assets/1be22ee1-7e48-43f1-8493-874917119589
+
+
 
 **My Improvement:** I was able to lessen the downtime into less than 1 second by adjusting the interval to 200ms, keep note this methos is cpu intensive!
 Since we have CCR2116 as an absolute powerhouse core we will have no problem with an interval of 200ms 
