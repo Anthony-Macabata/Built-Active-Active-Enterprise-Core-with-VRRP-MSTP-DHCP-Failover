@@ -54,8 +54,6 @@ Built VRRP-based virtual gateway system achieving failover convergence in <1 sec
 **Hardened Network Segmentation**  
 Developed stateful firewall filter rules and address lists to enforce strict per department VLAN isolation. Reduced internal attack surface without impacting line-rate performance.
 
-https://github.com/user-attachments/assets/0a27f1f6-234f-4fe4-9e7e-617283c09e23
-
 ---
 
 ## The Proof
@@ -65,13 +63,14 @@ https://github.com/user-attachments/assets/0a27f1f6-234f-4fe4-9e7e-617283c09e23
 **What I did:** Simulated a total hardware crash on Core 1. 
 **What happened:** VRRP state transition to Backup Core completed in under 4 seconds. Only 4 packets dropped during the transition.
 
-
-https://github.com/user-attachments/assets/1be22ee1-7e48-43f1-8493-874917119589
-
-
+https://github.com/user-attachments/assets/aacd9f15-05fa-40ee-8f06-9ed837b44fb1
 
 **My Improvement:** I was able to lessen the downtime into less than 1 second by adjusting the interval to 200ms, keep note this methos is cpu intensive!
 Since we have CCR2116 as an absolute powerhouse core we will have no problem with an interval of 200ms 
+
+
+
+
 
 ---
 
