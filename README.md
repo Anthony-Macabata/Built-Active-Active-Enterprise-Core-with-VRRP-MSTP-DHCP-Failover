@@ -68,9 +68,7 @@ https://github.com/user-attachments/assets/aacd9f15-05fa-40ee-8f06-9ed837b44fb1
 **My Improvement:** I was able to lessen the downtime into less than 1 second by adjusting the interval to 200ms, keep note this methos is cpu intensive!
 Since we have CCR2116 as an absolute powerhouse core we will have no problem with an interval of 200ms 
 
-
-
-
+https://github.com/user-attachments/assets/420fa2db-e2a0-4a94-ac59-e8b4fc57c711
 
 ---
 
@@ -80,7 +78,7 @@ Since we have CCR2116 as an absolute powerhouse core we will have no problem wit
 
 **What happened:** Client successfully pulled a secondary lease from Core 2's reserved pool. No network lockout.
 
-![DHCP Failover](https://YOUR-IMAGE-HOST.com/dhcp-failover.gif)
+https://github.com/user-attachments/assets/e9119ca0-03bf-47df-af77-19cb43093aab
 
 ---
 
@@ -90,7 +88,7 @@ Since we have CCR2116 as an absolute powerhouse core we will have no problem wit
 
 **What happened:** Achieved a less than one second failover convergence, only one packet loss!
 
-![MSTP Port States](https://YOUR-IMAGE-HOST.com/mstp-ports.gif)
+https://github.com/user-attachments/assets/a82f9ea3-aa2a-4ffe-8ced-cd3dec249ae1
 
 ---
 
@@ -100,7 +98,7 @@ Since we have CCR2116 as an absolute powerhouse core we will have no problem wit
 
 **What happened:** 100% drop rate verified via real-time packet counters on the Firewall Filter chain.
 
-![Firewall Drop](https://YOUR-IMAGE-HOST.com/firewall-drop.png)
+
 
 ---
 
@@ -114,7 +112,7 @@ The biggest challenge was preventing L2 loops while keeping L3 gateways active.
 
 **VLSM Management**
 
-With 2,800+ potential hosts across 9 VLANs, I had to ensure the IP addressing was mathematically perfect. No subnet overlap. No route flapping.
+With many potential hosts across 9 VLANs, I had to ensure the subnetting. No subnet overlap. No route flapping.
 
 **How I solved it:** Mapped every VLAN carefully before touching a single router.
 
@@ -124,19 +122,16 @@ With 2,800+ potential hosts across 9 VLANs, I had to ensure the IP addressing wa
 
 Modern networks shouldn't have "idle" hardware.
 
-Active-Passive is easy. Any junior admin can set up a backup router that never gets used.
-
 Active-Active is engineering. It forces you to understand how traffic actually flows, where loops can form, and how to make every device work for its keep.
-
-**The Metric That Matters: Link Utilization**
-
-I measured which ports were forwarding vs discarding on each MSTI. Standard STP would have left one link completely idle. MSTP gives me 100% utilization of both uplinks.
 
 ---
 
 ## The Proposal
 
-![Network Topology](https://i.imgur.com/q7hxYZl.png)
+
+https://github.com/user-attachments/assets/0c4b3380-e009-4229-a450-f65601047c71
+
+
 
 **Core Layer:** Dual MikroTik CCR2116 (L3) 
 **Access Layer:** Triple MikroTik CRS Series (L2)  
