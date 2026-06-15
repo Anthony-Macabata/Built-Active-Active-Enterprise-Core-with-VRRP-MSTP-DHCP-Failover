@@ -78,7 +78,7 @@ https://github.com/user-attachments/assets/420fa2db-e2a0-4a94-ac59-e8b4fc57c711
 
 **What happened:** Client successfully pulled a secondary lease from Core 2's reserved pool. No network lockout.
 
-https://github.com/user-attachments/assets/e9119ca0-03bf-47df-af77-19cb43093aab
+https://github.com/user-attachments/assets/40daef2c-028d-4c9a-b16c-ce3bb4daf78d
 
 ---
 
