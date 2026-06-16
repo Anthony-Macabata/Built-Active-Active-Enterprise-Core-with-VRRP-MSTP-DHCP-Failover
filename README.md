@@ -7,7 +7,7 @@
 
 ## The Topology
 
-![Network Topology](https://i.imgur.com/q7hxYZl.png)
+
 
 ---
 
@@ -18,9 +18,9 @@ Okay so here's the scenario:
 Most networks run Active-Passive Failover design. One router does all the work. The other sits there collecting dust, waiting for a disaster that might never happen. That's a waste of hardware. For this project, I wanted every device to actually **do something**. No idle backups. No wasted bandwidth.
 
 I engineered an Active-Active infrastructure where:
-1. VLANs 10,30,50,70 gets its primary DHCP pool from Core Router 1, the other half DHCP pool gets it from Core Router 2 in the event that Core Router 1 dies
+1. VLAN 10 gets its primary DHCP pool from Core Router 1, the other half DHCP pool gets it from Core Router 2 in the event that Core Router 1 dies
    
-2. VLANs 20,40,60,80 gets its primary DHCP pool from Core Router 2, the other half DHCP pool gets it from Core Router 1 in the event that Core Router 2 dies
+2. VLAN 20 gets its primary DHCP pool from Core Router 2, the other half DHCP pool gets it from Core Router 1 in the event that Core Router 2 dies
    
 3. Each VLANs gets its own VRRP Gateway which acts as a Virtual Router, so in total we have one gateway per VLAN shared by both Core Routers
    
@@ -28,8 +28,8 @@ I engineered an Active-Active infrastructure where:
 - If either dies, the other takes over in under a second
 
 5. As LACP doesn't do the job for two links which are ongoing from two Core Routers, I used MSTP and segmented the two links
-- Link 1: VLANs 10,30,50,70
-- Link 2: VLANs 20,40,60,80
+- Link 1: VLAN 10
+- Link 2: VLAN 20
 
 So every hardware earns its keep!
 
@@ -38,7 +38,7 @@ So every hardware earns its keep!
 ## Performance Highlights
 
 **Layer 2 Redundancy**  
-Synchronized MSTP instances with VRRP priorities to steer 10,30,50,70 VLANS through Core 1 and 20,40,60,80 VLANS through Core 2. Eliminated link blocking and allowing failover
+Synchronized MSTP instances with VRRP priorities to steer VLAN 10 through Core 1 and VLAN 20 through Core 2. Eliminated link blocking and allowing failover
 
 **Automatic DHCP Failover**  
 Configured split-scope DHCP architecture with reserved pools. Verified 100% lease continuity during total core-router failure scenarios.
@@ -60,7 +60,7 @@ Developed stateful firewall filter rules and address lists to enforce strict per
 
 https://github.com/user-attachments/assets/aacd9f15-05fa-40ee-8f06-9ed837b44fb1
 
-**My Improvement:** I was able to lessen the downtime into less than 1 second by adjusting the interval to 200ms, keep note this methos is cpu intensive!
+**My Improvement:** I was able to lessen the downtime into less than 1 second only 1 packet dropped by adjusting the interval to 200ms, keep note this method is cpu intensive!
 Since we have CCR2116 as an absolute powerhouse core we will have no problem with an interval of 200ms 
 
 https://github.com/user-attachments/assets/420fa2db-e2a0-4a94-ac59-e8b4fc57c711
@@ -123,7 +123,7 @@ Active-Active is engineering. It forces you to understand how traffic actually f
 
 ## Project Proposal Scenario
 
-<img width="1643" height="941" alt="image" src="https://github.com/user-attachments/assets/6429f679-e8ec-4345-9601-37850e9af3fb" />
+<img width="1462" height="835" alt="image" src="https://github.com/user-attachments/assets/1c59f0f1-55c7-4758-a80f-4080f8ece81e" />
 
 <img width="901" height="673" alt="image" src="https://github.com/user-attachments/assets/321e2f9e-016b-42be-b33b-d52a8bc3c855" />
 
