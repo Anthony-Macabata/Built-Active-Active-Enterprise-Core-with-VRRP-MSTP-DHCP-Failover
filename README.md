@@ -125,10 +125,9 @@ Active-Active is engineering. It forces you to understand how traffic actually f
 
 <img width="1462" height="835" alt="image" src="https://github.com/user-attachments/assets/1c59f0f1-55c7-4758-a80f-4080f8ece81e" />
 
-<img width="901" height="673" alt="image" src="https://github.com/user-attachments/assets/321e2f9e-016b-42be-b33b-d52a8bc3c855" />
+<img width="915" height="672" alt="image" src="https://github.com/user-attachments/assets/609981c5-dbcf-4c3a-bb3c-2ef927aa0c64" />
 
-<img width="991" height="686" alt="image" src="https://github.com/user-attachments/assets/9943e027-5059-4cd0-a29b-ed2ddf44b927" />
-
+<img width="990" height="653" alt="image" src="https://github.com/user-attachments/assets/62890fbb-ffef-46dc-bf8c-01eeadaca782" />
 
 **Core Layer:** Dual MikroTik CCR2116 (L3) 
 **Access Layer:** Triple MikroTik CRS Series (L2)  
