@@ -136,5 +136,5 @@ Active-Active is engineering. It forces you to understand how traffic actually f
 
 ---
 
-*First project down. More to come.* 🔥
+*First project down. More to come.* 
 
